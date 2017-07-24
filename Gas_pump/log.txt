@@ -1,0 +1,16 @@
+type, gallons, price
+Regular, 6.25, 12.0
+Premium, 10.0, 21.8
+Mid-Grade, 10.0, 20.0
+Premium, 14.0, 30.52
+Regular, 18.22, 35.0
+mid-Grade, 50.0, 100.0
+regular, 52.08, 100.0
+premium, 10.0, 21.8
+mid-Grade, 50.0, 100.0
+mid-Grade, 25.0, 50.0
+mid-Grade, 50.0, 100.0
+regular, 26.04, 50.0
+mid-Grade, 50.0, 100.0
+mid-Grade, 32.5, 65.0
+regular, 28.64, 55.0
