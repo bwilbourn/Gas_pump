@@ -11,4 +11,14 @@ def tank_inven():
 def log_file(message):
     with open('log.txt', 'a') as file:
         file.write(message)
-    return gas_kind
+    return message
+
+def in_the_log():
+    inventory = []
+    with open('log.txt', 'r') as file:
+        file.readline()
+        lines = file.readlines()
+    for line in lines:
+        split_string = line.strip().split(', ')
+        inventory.append([split_string[0], float(split_string[1]), float(split_string[2].strip().replace('$', ''))])
+    return inventory

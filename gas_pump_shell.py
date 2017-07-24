@@ -5,10 +5,10 @@ def main():
     print('Welcome to Brits Gas\n')
     payment = input('\nWould you like to pre-pay or pay after?\n')
     if payment == 'refuel':
-        print(gas_pump_core.refuel())
+        print(gas_pump_core.refuel(inventory))
         return None
     if payment == 'revenue':
-        print('Your total revenue is ${:.2f}'.format(gas_pump_core.revenue()))
+        print('Your total revenue is ${:.2f}'.format(gas_pump_core.revenue(inventory)))
         return None
 
     gas_kind = input('\n(1) Regular $1.92, (2) Mid-Grade $2.00, (3) Premium $2.18\n')
