@@ -28,33 +28,18 @@ def prepay(gas_kind):
     print('\nYour total amount of gallons purchased:\n', round(gallons, 2))
     return [money, gallons, gas_kind]
 
-def log_file(gas_kind, gallons, dollars):    
+def message_log(gas_kind, gallons, dollars):    
     if gas_kind == '1' or gas_kind == 'one':
         gas_kind = 'regular' 
     elif gas_kind == '2' or gas_kind == 'two':
         gas_kind = 'mid-Grade'
     elif gas_kind == '3' or gas_kind == 'three':
         gas_kind = 'premium'
-    message = '{}, {}, {}\n'.format(gas_kind, dollars, gallons)
-
-    with open('log.txt', 'a') as file:
-        file.write(message)
-    return gas_kind
-
-def tank_inven():
-    inventory = []
-    with open('tank.txt', 'r') as file:
-        file.readline()
-        str_inventory = file.readlines()
-    for item in str_inventory:
-        sub_list = item.strip().split(', ')
-        inventory.append([sub_list[0], sub_list[1], float(sub_list[2]), float(sub_list[3])])
-    return inventory
+    return = '{}, {}, {}\n'.format(gas_kind, dollars, gallons)
 
 
-def take_away(gas_kind, gallons):
+def take_away(gas_kind, gallons, inventory):
     str_l = ['code, type, amount_in_inventory, price']
-    inventory = tank_inven()
     for item in inventory:
         if item[0] == gas_kind:
             item[2] = item[2] - gallons

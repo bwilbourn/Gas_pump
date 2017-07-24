@@ -1,3 +1,26 @@
 name, time, date
 Britney , 5:56 , July-9
 Britney , 7:56 , July-9
+Britney , 7:45 , July-3
+Maegan  , 12:45 , July-23
+Britney , 5:56 , September-25
+Britney , 2:30 , July-7
+Britney , 13:01 , September-25
+Britney , 8:30 , September-25
+Shay , 7:56 , July-14
+Maegan , 8:30 , July-14
+Allie , 8:16 , July-14
+Edgar , 8:25 , July-14
+Shedlia , 8:24 , July-14
+Ozvaldo , 8:56 , July-14
+Valentae , 8:50 , July-14
+Maegan , 8:30 , July-20
+Jose , 10:32 , July-20
+Allie , 7:32 , July-21
+Sara , 9:15 , September-23
+Ozvaldo , 6:24 , August-7
+Shedlia , 11:27 , July-20
+Shay , 7:23 , July-13
+Britney , 5:56 , July-30
+Timothy , 11:12 , July-13
+Allie , 15:55 , July-20

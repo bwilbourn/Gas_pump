@@ -1,6 +1,7 @@
-import gas_pump_core
+import gas_pump_core, gas_disk
 
 def main():
+    inventory = gas_disk.tank_inven()
     print('Welcome to Brits Gas\n')
     payment = input('\nWould you like to pre-pay or pay after?\n')
     if payment == 'refuel':
@@ -17,8 +18,9 @@ def main():
     elif payment == 'pay after':
         dollars, gallons, gas_kind = gas_pump_core.pay_after(gas_kind)
     
-    gas_pump_core.log_file(gas_kind, dollars, gallons)
-    if gas_pump_core.take_away(gas_kind, gallons):
+    msg = gas_pump_core.message_log(gas_kind, dollars, gallons) # writes the message for the log (str)
+    gas_disk.log_file(msg) # writes the message to the log (file)
+    if gas_pump_core.take_away(gas_kind, gallons, inventory):
         print('Successful sale!')
     
 if __name__ == '__main__':
