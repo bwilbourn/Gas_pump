@@ -9,24 +9,20 @@ def gas_price(gas_kind):
         return 2.18
     return False
 
-def pay_after(gas_kind):
+def pay_after(gallons, price):
     """ 
     """
-    gallons = float(input('\nHow many gallons would you like to purchase?\n'))
-    price = gas_price(gas_kind)
     dollars = gallons * price 
-    print('\nYour total is: $', round(dollars, 2),sep='')
-    return [dollars, gallons, gas_kind]
+    message = '\nYour total is: ${}'.format(round(dollars, 2))
+    return [dollars, message]
     
     
-def prepay(gas_kind):
+def prepay(money, price):
     """
     """
-    money = float(input('\nHow much money would you like to spend?\n'))
-    price = gas_price(gas_kind)
     gallons = money / price
-    print('\nYour total amount of gallons purchased:\n', round(gallons, 2))
-    return [money, gallons, gas_kind]
+    msgg = '\nYour total amount of gallons purchased: ${}'.format(round(gallons, 2))
+    return [gallons, msgg]
 
 def message_log(gas_kind, gallons, dollars):    
     if gas_kind == '1' or gas_kind == 'one':
@@ -68,7 +64,6 @@ def refuel(inventory):
 def revenue(inventory):
     price = 0 
     for item in inventory:
-        item[2] = float(item[2]) + float(item[2])
         price += item[2]
     return price 
 
